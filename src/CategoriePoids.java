@@ -1,0 +1,60 @@
+import java.io.Serializable;
+
+
+public class CategoriePoids implements  Serializable { /**
+ * 
+ */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public String toString() {
+		return "CategoriePoids [poidsMin=" + poidsMin + ", poidsMax=" + poidsMax
+				;
+	}
+	private int poidsMin;
+	private int poidsMax;
+	private String nom;
+	private String genre;
+	private Categorie categorie;
+	
+
+	public CategoriePoids(int poidsMin, int poidsMax,String nom,String genre,Categorie categorie) {
+		super();
+		this.poidsMin = poidsMin;
+		this.poidsMax = poidsMax;
+		this.nom=nom;
+		this.genre=genre;
+		this.setCategorie(categorie);
+	}
+	public int getPoidsMin() {
+		return poidsMin;
+	}
+	public void setPoidsMin(int poidsMin) {
+		this.poidsMin = poidsMin;
+	}
+	public int getPoidsMax() {
+		return poidsMax;
+	}
+	public void setPoidsMax(int poidsMax) {
+		this.poidsMax = poidsMax;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	public Categorie getCategorie() {
+		return categorie;
+	}
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
+	}
+
+}
